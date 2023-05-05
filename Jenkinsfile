@@ -38,6 +38,7 @@ pipeline {
 
                    sshagent(['ec2-server-key']) {  
                        sh "ssh -o StrictHostKeyChecking=no ${ec2Instance} ${dockerCmd}"
+                   }
                 }
             }
         } 
