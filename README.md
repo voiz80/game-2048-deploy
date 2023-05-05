@@ -12,6 +12,8 @@ Made just for fun. [Play it here!](http://gabrielecirulli.github.io/2048/)
 That screenshot is fake, by the way. I never reached 2048 :smile:
 
 ### Jenkins
+###### Setup all credentials
+Create multibranch pipeline in Jenkins
 Stage
 - build - build Docker container
 - login - login private DockerHub repo
@@ -24,4 +26,17 @@ We need login in DockerHub private repo drom ec2 instance
 ```
 docker login -u <docker-hub-user>
 # for password input dockerhub generated private key
+```
+### or new EC2
+```
+sudo yum update
+sudo yum install docker
+docker --version
+sudo service docker start
+ps aux | grep docker # or systemctl status docker
+# add user docker like sudo
+sudo usermod -aG docker $USER
+docker login -u <docker-hub-user>
+groups
+exit
 ```
