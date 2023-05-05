@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         IMAGE_NAME = 'voiz80/my-repo:game2048-1.0'
-        IP_EC2 = ''
+        IP_EC2 = '3.121.237.75'
         DOCKERHUB_CREDENTIALS = credentials('docker-hub-repo')
     }
     stages {
