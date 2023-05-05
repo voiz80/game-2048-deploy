@@ -1,4 +1,4 @@
-//for deploy to AWS EC2 form private DockerHub
+#!/usr/bin/env groovy
 pipeline {
     agent any
     environment {
